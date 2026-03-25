@@ -26,3 +26,13 @@ struct Node* insert(struct Node* ptr, char data) {
 	}
 }
 
+struct Node* search(struct Node* ptr, char data) {
+	if (ptr == NULL) return NULL;	// node not found
+	if (data == ptr->data) return ptr;	// return found node
+	if (data < ptr->data) {
+		return search(ptr->left, data);	// continue search on the left
+	}
+	else {
+		return search(ptr->right, data);	// continue search on the right
+	}
+}
