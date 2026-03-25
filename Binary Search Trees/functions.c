@@ -36,3 +36,13 @@ struct Node* search(struct Node* ptr, char data) {
 		return search(ptr->right, data);	// continue search on the right
 	}
 }
+
+int countNodes(struct Node* ptr) {
+	int counter;
+	if (ptr == NULL) return(0);
+	return countNodes(ptr->left) + countNodes(ptr->right) + 1;
+}
+
+int treeHeight(struct Node* ptr) {
+
+}
