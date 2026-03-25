@@ -37,12 +37,23 @@ struct Node* search(struct Node* ptr, char data) {
 	}
 }
 
+// counts the amount of nodes in the tree
 int countNodes(struct Node* ptr) {
 	int counter;
 	if (ptr == NULL) return(0);
 	return countNodes(ptr->left) + countNodes(ptr->right) + 1;
 }
 
+// determine greatest height (excluding root) of tree
 int treeHeight(struct Node* ptr) {
-
+	int leftHeight, rightHeight;
+	if (ptr == NULL) return(-1);
+	leftHeight = treeHeight(ptr->left);
+	rightHeight = treeHeight(ptr->right);
+	if (leftHeight > rightHeight) {
+		return (leftHeight + 1);
+	}
+	else {
+		return (rightHeight + 1);
+	}
 }
