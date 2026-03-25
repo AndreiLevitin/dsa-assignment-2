@@ -5,11 +5,13 @@ struct Node {
 	struct Node* right;
 };
 
-// Insert
+// Insert function
 struct Node* insert(struct Node* ptr, char data);
-// Search
+// Search function
 struct Node* search(struct Node* ptr, char data);
-// Count Nodes
+// Count Nodes function
 int countNodes(struct Node* ptr);
-// Determine Tree Height
+// Determine Tree Height function
 int treeHeight(struct Node* ptr);
+// Inorder traversal print function
+void printTreeInorderTraversal(struct Node* ptr);

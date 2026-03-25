@@ -57,3 +57,11 @@ int treeHeight(struct Node* ptr) {
 		return (rightHeight + 1);
 	}
 }
+
+// Inorder traversal print function
+void printTreeInorderTraversal(struct Node* ptr) {
+	if (ptr == NULL) return;
+	printTreeInorderTraversal(ptr->left);	// first prints left subtreee
+	printf("%c\n", ptr->data);				// second prints the root
+	printTreeInorderTraversal(ptr->right);	// third prints right subtree
+}
