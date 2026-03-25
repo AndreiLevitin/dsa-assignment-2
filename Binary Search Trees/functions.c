@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include "functions.h"
 
@@ -45,11 +46,11 @@ int countNodes(struct Node* ptr) {
 }
 
 // determine greatest height (excluding root) of tree
-int treeHeight(struct Node* ptr) {
+int getTreeHeight(struct Node* ptr) {
 	int leftHeight, rightHeight;
 	if (ptr == NULL) return(-1);
-	leftHeight = treeHeight(ptr->left);
-	rightHeight = treeHeight(ptr->right);
+	leftHeight = getTreeHeight(ptr->left);
+	rightHeight = getTreeHeight(ptr->right);
 	if (leftHeight > rightHeight) {
 		return (leftHeight + 1);
 	}

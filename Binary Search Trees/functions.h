@@ -12,6 +12,6 @@ struct Node* search(struct Node* ptr, char data);
 // Count Nodes function
 int countNodes(struct Node* ptr);
 // Determine Tree Height function
-int treeHeight(struct Node* ptr);
+int getTreeHeight(struct Node* ptr);
 // Inorder traversal print function
 void printTreeInorderTraversal(struct Node* ptr);
